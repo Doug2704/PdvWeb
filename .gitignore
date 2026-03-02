@@ -1,0 +1,20 @@
+# --- JAVA / MAVEN ---
+/target/
+/logs/
+*.class
+!.mvn/wrapper/maven-wrapper.jar
+
+# --- NODE / ELECTRON ---
+node_modules/
+dist/
+build/
+
+# --- INTELLIJ / IDE ---
+/shelf/
+/.idea/workspace.xml
+/queries/
+/dataSources/
+/dataSources.local.xml
+/httpRequests/
+.idea/
+*.iml
