@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "sangrias")
 public class Sangria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(nullable = false, name = "title", unique = true)
     private Double valor;
 
     private LocalDateTime dataHora;
@@ -20,7 +21,6 @@ public class Sangria {
 
     // Getters e Setters
     public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
     public Double getValor() { return valor; }
     public void setValor(Double valor) { this.valor = valor; }
     public LocalDateTime getDataHora() { return dataHora; }

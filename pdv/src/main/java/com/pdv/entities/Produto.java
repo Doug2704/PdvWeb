@@ -1,15 +1,14 @@
 package com.pdv.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "produtos")
 public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, name = "produto_id")
     private Long id;
 
     private String nome;
@@ -18,15 +17,8 @@ public class Produto {
     // PADRONIZADO: Nome 'estoque' e tipo 'Integer' para evitar erro de Double
     private Integer estoque;
 
-    public Produto() {
-    }
-
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -51,6 +43,16 @@ public class Produto {
     }
 
     public void setEstoque(Integer estoque) {
+        this.estoque = estoque;
+    }
+
+    public Produto() {
+    }
+
+    public Produto(String nome, Double preco, Integer estoque) {
+
+        this.nome = nome;
+        this.preco = preco;
         this.estoque = estoque;
     }
 }
