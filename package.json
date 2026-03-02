@@ -1,0 +1,35 @@
+{
+  "name": "pdvweb-desktop",
+  "version": "1.0.0",
+  "description": "Sistema de PDV Desktop - Johnalex",
+  "author": "John Alex",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "com.johnalex.pdvweb",
+    "productName": "PdvWeb",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PdvWeb"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
