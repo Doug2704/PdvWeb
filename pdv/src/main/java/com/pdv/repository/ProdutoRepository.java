@@ -1,6 +1,6 @@
 package com.pdv.repository;
 
-import com.pdv.model.Produto;
+import com.pdv.entities.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

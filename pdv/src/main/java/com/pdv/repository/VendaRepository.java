@@ -1,6 +1,6 @@
 package com.pdv.repository;
 
-import com.pdv.model.Venda;
+import com.pdv.entities.Venda;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.time.LocalDateTime;

@@ -1,7 +1,7 @@
 package com.pdv;
 
-import com.pdv.model.Caixa;
-import com.pdv.model.Venda;
+import com.pdv.entities.Caixa;
+import com.pdv.entities.Venda;
 import com.pdv.repository.CaixaRepository;
 import com.pdv.repository.VendaRepository;
 import org.springframework.beans.factory.annotation.Autowired;

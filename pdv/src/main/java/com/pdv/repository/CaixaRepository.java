@@ -1,6 +1,6 @@
 package com.pdv.repository;
 
-import com.pdv.model.Caixa;
+import com.pdv.entities.Caixa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
 package com.pdv.controller;
 
-import com.pdv.model.Venda;
-import com.pdv.model.Produto;
-import com.pdv.model.ItemVenda; // Importe a entidade ItemVenda
+import com.pdv.entities.Venda;
+import com.pdv.entities.Produto;
+import com.pdv.entities.ItemVenda; // Importe a entidade ItemVenda
 import com.pdv.repository.VendaRepository;
 import com.pdv.repository.ItemVendaRepository; // Importe o repository
 import org.springframework.beans.factory.annotation.Autowired;

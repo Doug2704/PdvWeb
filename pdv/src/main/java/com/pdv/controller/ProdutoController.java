@@ -1,6 +1,6 @@
 package com.pdv.controller;
 
-import com.pdv.model.Produto;
+import com.pdv.entities.Produto;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

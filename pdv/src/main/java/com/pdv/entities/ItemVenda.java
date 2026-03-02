@@ -1,6 +1,7 @@
-package com.pdv.model;
+package com.pdv.entities;
 
 import jakarta.persistence.*;
+
 @Entity
 @Table(name = "item_venda") // Resolve o erro: Cannot resolve table
 
@@ -20,8 +21,10 @@ public class ItemVenda {
     @JoinColumn(name = "produto_id") // Resolve o erro: Cannot resolve column 'produto_id'
     private Produto produto;
 
+    @Column(nullable = false, name = "quantidade")
     private Double quantidade;
 
+    @Column(nullable = false, name = "subtotal")
     private Double subTotal;
 
     public ItemVenda() {

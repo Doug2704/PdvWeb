@@ -1,6 +1,6 @@
 package com.pdv.service;
 
-import com.pdv.model.Produto;
+import com.pdv.entities.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.pdv.model;
+package com.pdv.entities;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

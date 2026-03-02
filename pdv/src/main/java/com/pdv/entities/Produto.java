@@ -1,5 +1,6 @@
-package com.pdv.model;
+package com.pdv.entities;
 
+import com.pdv.exception.ValorNegationException;
 import jakarta.persistence.*;
 
 @Entity
@@ -11,10 +12,14 @@ public class Produto {
     @Column(nullable = false, name = "produto_id")
     private Long id;
 
+    @Column(nullable = false, name = "nome")
     private String nome;
+
+    @Column(nullable = false, name = "preco")
     private Double preco;
 
     // PADRONIZADO: Nome 'estoque' e tipo 'Integer' para evitar erro de Double
+    @Column(nullable = false, name = "estoque")
     private Integer estoque;
 
     public Long getId() {
@@ -34,6 +39,9 @@ public class Produto {
     }
 
     public void setPreco(Double preco) {
+        if (preco < 0) {
+            throw new ValorNegationException("preço", preco);
+        }
         this.preco = preco;
     }
 
@@ -43,6 +51,9 @@ public class Produto {
     }
 
     public void setEstoque(Integer estoque) {
+        if (estoque < 0) {
+            throw new ValorNegationException("Estoque", estoque.doubleValue());
+        }
         this.estoque = estoque;
     }
 
@@ -50,7 +61,6 @@ public class Produto {
     }
 
     public Produto(String nome, Double preco, Integer estoque) {
-
         this.nome = nome;
         this.preco = preco;
         this.estoque = estoque;
